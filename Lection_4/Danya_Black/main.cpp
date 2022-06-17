@@ -1,18 +1,33 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-    char YourString[255];
-    int amount = 1;
-    cout << "Enter the string: ";
-    cin.get(YourString, 255);
-    for (int index = 0; YourString[index+1] != '\0'; index++)
-    {
-        if((((YourString[index] >= 'a' &&YourString[index] <= 'z') || (YourString[index] >= 'A' && YourString[index] <= 'Z')) && !((YourString[index+1] >= 'a' && YourString[index+1] <= 'z') || (YourString[index+1] >= 'A' && YourString[index+1] <= 'Z'))) || (YourString[index] >= 'a' &&YourString[index] <= 'z') && (YourString[index+1] >= 'A' &&YourString[index+1] <= 'Z'))
-            amount++;
+    string script_text = "No, maey! Yu znoy zgyq oy g ykixkz gtj o gs mrgj, zngz eua yurbk oz."
+                          "Vrkgyk, hk coykx gtj jut'z zkrr gteutk ghuaz znoy zgyq. Zu iusvrkzk oz eua tkkj zu avrugj"
+                          "zu euax moznah tkc zgyq cozn jkiovnkx gtj tgsk oz roqk *EuaxTgsk*_*EuaxLgbuaxozkIuruax*";
+    int counter = 0;
+    int key = 0;
+    cout << "Enter key to descript sentence: ";
+    cin >> key;
+    while(script_text[counter]){
+        counter++;
     }
-    cout << "Result: " << amount;
-    return 0;
+    for(int i = 0;i < counter;i++){
+        if(script_text[i]>='a' && script_text[i]<='z'){
+            script_text[i]=script_text[i]-key;
+        if(script_text[i]<'a'){
+            script_text[i]= (script_text[i]+26);
+        }
+        }
+        if(script_text[i]>='A' && script_text[i]<='Z'){
+            script_text[i]=script_text[i]-key;
+        if(script_text[i]<'A'){
+            script_text[i]= (script_text[i]+26);
+        }
+        }
+    }
+    cout << script_text;
 }
