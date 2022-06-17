@@ -4,18 +4,26 @@ using namespace std;
 
 int main()
 {
-    string sentence_1,sentence_2;
+    char sentence_1[256] = {};
+    char sentence_2[256] = {};
+    int counter_s1 = 0,counter_s2 = 0;
     cout << "Enter your first string: ";
-    getline(cin,sentence_1);
+    cin.getline(sentence_1,256);
     cout << "Enter your second string: ";
-    getline(cin,sentence_2);
-    if (sentence_1.size() > sentence_2.size()){
+    cin.getline(sentence_2,256);
+    while(sentence_1[counter_s1]){
+        counter_s1++;
+    }
+    while(sentence_2[counter_s2]){
+        counter_s2++;
+    }
+    if(counter_s1 > counter_s2){
         cout << "First string is bigger!";
     }
-    if (sentence_1.size() < sentence_2.size()){
-        cout << "Second string id bigger!";
+    if(counter_s1 < counter_s2){
+        cout << "Second string is bigger!";
     }
-    if (sentence_1.size() == sentence_2.size()){
+    if(counter_s1 == counter_s2){
         cout << "Strings are equal!";
     }
     return 0;
