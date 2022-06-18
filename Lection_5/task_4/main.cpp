@@ -27,7 +27,7 @@ void rootCalc(double a,double b,double c)
 
 int main()
 {
-    double a = 0, b = 0, c = 0, D = 0;
+    double a = 0, b = 0, c = 0;
     rootCalc(a,b,c);
     return 0;
 }
