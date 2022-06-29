@@ -3,11 +3,12 @@
 using namespace std;
 
 
-void craeteArray(int arr[],int arr_size = 0)
+void createArray(int arr[],int arr_size,int i)
 {
-    for (int i = 0; i < arr_size;i++){
+   if(i < arr_size){
         cout << "Enter " << i+1 << " element of array: ";
         cin >> arr[i];
+        createArray(arr,arr_size,i+1);
     }
 }
 
@@ -31,7 +32,7 @@ int main()
     cout << "Enter your array size: ";
     cin >> arr_size;
     int arr[arr_size];
-    craeteArray(arr,arr_size);
+    createArray(arr,arr_size,i);
     cout << "Enter number that you want to search: ";
     cin >> selector;
 
