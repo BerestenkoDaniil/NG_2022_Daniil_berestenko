@@ -35,5 +35,7 @@
 *.cbp
 *.depend
 *.layout
-*build-*\*
-*.pro*
+
+# Qt
+build-*
+*.pro.user
