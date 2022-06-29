@@ -35,4 +35,5 @@
 *.cbp
 *.depend
 *.layout
-build-*
+*build-*\*
+*.pro*
