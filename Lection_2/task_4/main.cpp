@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
     int size_tree = 0;
+    cout << "Enter size: ";
     cin >> size_tree;
     for (int i = 0;i < size_tree;i++){
         for(int j = 0;j < size_tree;j++){
