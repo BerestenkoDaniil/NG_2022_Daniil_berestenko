@@ -4,12 +4,16 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        enemy.cpp \
+        inventory_manager.cpp \
         main.cpp \
         meleeweapon.cpp \
-        rangedamage.cpp \
+        rangeweapon.cpp \
         weapon.cpp
 
 HEADERS += \
+    enemy.h \
+    inventory_manager.h \
     meleeweapon.h \
-    rangedamage.h \
+    rangeweapon.h \
     weapon.h

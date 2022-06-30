@@ -9,14 +9,16 @@ class Weapon
 {
 public:
     Weapon();
-    void setWeight(double weight){m_weight = weight;}
+    Weapon(string name,int damage,double weight);
     void setDamage(int damage){m_damage = damage;}
     void setName(string name){m_name = name;}
+    void setWeight(double weight){m_weight = weight;}
 
-    double getWeight(){return m_weight;}
+    int attack();
     string getName(){return m_name;}
     int getDamage(){return m_damage;}
-private:
+    double getWeight(){return m_weight;}
+protected:
     double m_weight;
     int m_damage;
     string m_name;
