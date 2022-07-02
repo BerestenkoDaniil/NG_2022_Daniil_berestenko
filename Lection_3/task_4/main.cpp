@@ -36,7 +36,7 @@ int main()
                     default: map[y][x] = '.';
                 }
 
-            pMap[y][x] = map[y][x];
+            pMap[y][x] = '*';
         }
     }
 
